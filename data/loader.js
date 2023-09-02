@@ -49,7 +49,7 @@
         })
     }
     if (('undefined' != typeof EJS_DEBUG_XX && true === EJS_DEBUG_XX)) {
-        await loadStyle('emu-css.css');
+        await loadStyle('emulator.css');
         await loadScript('emu-main.js');
         await loadScript('emulator.js');
     } else {
