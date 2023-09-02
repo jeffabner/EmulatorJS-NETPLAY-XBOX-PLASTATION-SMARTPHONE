@@ -76,7 +76,7 @@
    <body>
       <div id = box>
          <input type = file id = input>
-         Drag ROM file or click here
+         Arraste o arquivo ROM ou clique aqui
       </div>
       <script>
          input.onchange = async () => {
@@ -104,6 +104,9 @@
          
                  if (["col", "cv"].includes(ext))
                      return "coleco"
+                 
+                 if (["zip"].includes(ext))
+                     return "arcade"
          
                  if (["nds", "gba", "gb", "z64", "n64"].includes(ext))
                      return ext
@@ -132,7 +135,8 @@
                          "NEC PC-FX": "pcfx",
                          "SNK NeoGeo Pocket (Color)": "ngp",
                          "Bandai WonderSwan (Color)": "ws",
-                         "ColecoVision": "coleco"
+                         "ColecoVision": "coleco",
+                         "Arcade": "arcade"
                      }
          
                      const button = document.createElement("button")
@@ -176,32 +180,13 @@
              window.EJS_DEBUG_XX = true;
              window.EJS_EXPERIMENTAL_NETPLAY= true;
          
-             if (window.location.hostname === "demo.emulatorjs.org") {
-                 window.EJS_AdUrl = "https://ads.emulatorjs.org/";
-                 window.EJS_ready = function() {
-                     detectAdBlock("https://ads.emulatorjs.org/?blocked");
-                 }
-             }
+            
              
          
              script.src = "data/loader.js";
              document.body.appendChild(script);
          }
-         async function detectAdBlock(url) {
-             let adBlockEnabled = false
-             const googleAdUrl = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-             try {
-                 await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
-             } catch (e) {
-                 adBlockEnabled = true
-             } finally {
-                 window.EJS_ready = function() {
-                     if (adBlockEnabled) {
-                         window.EJS_adBlocked("https://emulatorjs.org/?blocked");
-                     }
-                 }
-             }
-         }
+  
          box.ondragover = () => box.setAttribute("drag", true);
          box.ondragleave = () => box.removeAttribute("drag");
       </script>
