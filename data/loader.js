@@ -48,8 +48,7 @@
             document.head.appendChild(script);
         })
     }
-    if (('undefined' != typeof EJS_DEBUG_XX && true === EJS_DEBUG_XX) ||
-        /(iPad|iPhone|iPod|Macintosh)/gi.test(navigator.userAgent)) {
+    if (('undefined' != typeof EJS_DEBUG_XX && true === EJS_DEBUG_XX)) {
         await loadStyle('emu-css.css');
         await loadScript('emu-main.js');
         await loadScript('emulator.js');
