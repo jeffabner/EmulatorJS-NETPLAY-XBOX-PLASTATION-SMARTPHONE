@@ -197,6 +197,9 @@ EJS_oldCores = true;
 [MAME 2003]: docs/Systems/MAME%202003.md
 
 
+![image](https://github.com/jeffabner/EmulatorJS-NETPLAY-XBOX-PLASTATION-SMARTPHONE/assets/33882384/4eb5ed2e-eeb7-4a92-bf15-82d8cab37f6e)
+
+
 <!-- 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮  Badges  🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 🎮 --->
 
 [Badge License]: https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge
