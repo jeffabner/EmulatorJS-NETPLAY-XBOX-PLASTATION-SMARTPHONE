@@ -34,17 +34,17 @@
     }
     
     if (('undefined' != typeof EJS_DEBUG_XX && true === EJS_DEBUG_XX)) {
-        await loadScript('emulator.js');
-        await loadScript('nipplejs.js');
-        await loadScript('shaders.js');
-        await loadScript('storage.js');
-        await loadScript('gamepad.js');
-        await loadScript('GameManager.js');
-        await loadScript('socket.io.min.js');
-        await loadStyle('emulator.css');
+      //  await loadScript('emulator.js');
+       // await loadScript('nipplejs.js');
+     //   await loadScript('shaders.js');
+     //   await loadScript('storage.js');
+      //  await loadScript('gamepad.js');
+       // await loadScript('GameManager.js');
+       // await loadScript('socket.io.min.js');
+       // await loadStyle('emulator.css');
     } else {
-        await loadScript('emulator.min.js');
-        await loadStyle('emulator.min.css');
+       // await loadScript('emulator.min.js');
+       // await loadStyle('emulator.min.css');
         
     }
     const config = {};
